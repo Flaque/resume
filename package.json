@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "frontend": "cd ./src/frontend; npm run dev",
+    "backend": "cd ./src/backend; npm run dev",
+    "dev": "concurrently --kill-others \"npm run frontend\" \"npm run backend\"",
+    "install-frontend": "cd ./src/frontend; yarn",
+    "install-backend": "cd ./src/backend; yarn",
+    "postinstall": "npm run install-frontend; npm run install-backend"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "concurrently": "^3.5.0"
+  }
+}
